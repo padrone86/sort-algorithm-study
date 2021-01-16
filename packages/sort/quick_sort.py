@@ -1,5 +1,4 @@
-from util.input_generator import generate_random_list
-from util.stop_watch import stop_watch
+from ..util.stop_watch import stop_watch
 
 
 def get_pivot_item(input_list: list) -> list:
@@ -47,10 +46,3 @@ def quick_sort(input_list: list, pivot_item) -> (list, list):
 def sort(input_list: list) -> list:
     """入力されたリストをソートする"""
     return quick_sort(input_list, get_pivot_item(input_list))
-
-
-if __name__ == "__main__":
-    target_list = generate_random_list(10)
-    result_list = sort(target_list)
-
-    print(f"Result list: {result_list}")

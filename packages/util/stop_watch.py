@@ -8,6 +8,6 @@ def stop_watch(func: callable):
         start = time.perf_counter()
         result = func(*args, **kwargs)
         end = time.perf_counter()
-        print(f"{func.__name__} 実行時間: {end - start}")
+        print(f"{func.__module__}_{func.__name__}\t実行時間: {end - start}")
         return result
     return wrapper
